@@ -15,8 +15,6 @@ while game_is_on:
     screen.update()
     #Aqui é onde alteramos o tempo de atualização da tela
     time.sleep(0.30)
-    print("hello world")
-
     snake.move()
 
 screen.exitonclick()
