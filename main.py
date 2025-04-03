@@ -13,7 +13,8 @@ snake = Snake()
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.25)
+    #Aqui é onde alteramos o tempo de atualização da tela
+    time.sleep(0.30)
     print("hello world")
 
     snake.move()
