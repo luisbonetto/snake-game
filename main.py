@@ -28,15 +28,25 @@ while game_is_on:
     # Aqui é onde alteramos o tempo de atualização da tela
     time.sleep(0.1)
     snake.move()
-    # Agora iremos detectar a colisão com a comida
-    if snake.head.distance(food) < 15:
+    # Detecta colisão com a comida
+    if snake.head.distance(food) < 10:
         food.refresh()
+        snake.extend_segment()
         score.increase_score()
 
-    #Detectamos colisão com a parede
+    #Detecta colisão com a parede
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         score.game_over()
         game_is_on = False
 
+    #Detecta colisão com o corpo
+    for segment in snake.segments:
+        #Descontamos a cabeça
+        if segment == snake.head:
+            pass
+        #Começamos a contar a partir do corpo
+        elif snake.head.distance(segment) < 10:
+            game_is_on = False
+            score.game_over()
 
 screen.exitonclick()
