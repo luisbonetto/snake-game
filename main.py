@@ -25,12 +25,18 @@ screen.onkey(snake.right,"Right")
 
 while game_is_on:
     screen.update()
-    time.sleep(0.1) #Aqui é onde alteramos o tempo de atualização da tela
+    # Aqui é onde alteramos o tempo de atualização da tela
+    time.sleep(0.1)
     snake.move()
-    if snake.head.distance(food) < 15: #Agora iremos detectar a colisão com a comida
-        print("nom nom nom")
-        points += 1
-        score.increase_score()
+    # Agora iremos detectar a colisão com a comida
+    if snake.head.distance(food) < 15:
         food.refresh()
+        score.increase_score()
+
+    #Detectamos colisão com a parede
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        score.game_over()
+        game_is_on = False
+
 
 screen.exitonclick()
