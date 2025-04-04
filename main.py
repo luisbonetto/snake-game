@@ -40,12 +40,20 @@ while game_is_on:
         game_is_on = False
 
     #Detecta colisão com o corpo
-    for segment in snake.segments:
-        #Descontamos a cabeça
-        if segment == snake.head:
-            pass
+    # for segment in snake.segments:
+    #     #Descontamos a cabeça
+    #     if segment == snake.head:
+    #         pass
+    #     #Começamos a contar a partir do corpo
+    #     elif snake.head.distance(segment) < 10:
+    #         game_is_on = False
+    #         score.game_over()
+
+    #‘Loop’ for atualizado com 'Slice', ou seja, fatíamos a nossa fila depois do índice 0
+    # Em seguida começamos contar a partir do índice 1
+    for segment in snake.segments[1:]:
         #Começamos a contar a partir do corpo
-        elif snake.head.distance(segment) < 10:
+        if snake.head.distance(segment) <  10:
             game_is_on = False
             score.game_over()
 
