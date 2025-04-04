@@ -1,12 +1,12 @@
 Olá pessoas, tudo bem? Vou dar uma breve explicação sobre esse projeto. 
 Este projeto é o famoso jogo da cobrinha, para quem não conhece se trata de uma representação bem simples de uma "cobra" percorrendo um "cenário" à procura de comida.
-O obejetivo é passar com a cobra por cima dos alimentos que serão representados por um circulo púrpura.
-Cada vez que conseguir atingir um alimento a sua potuação aumentará e o corpo da cobra também vai aumentar.
-Caso a cobra venha a colidir com a parede do cenario ou com o proprio corpo o jogo será encerrado.
+O objetivo é passar com a cobra por cima dos alimentos que serão representados por um circulo púrpura.
+Cada vez que conseguir atingir um alimento a sua pontuação aumentará, e o corpo da cobra também vai aumentar.
+Caso a cobra venha a colidir com a parede do cenário ou com o próprio corpo o jogo será encerrado.
 Para controlar a cobra utilizei as setas "cima", "baixo", "esquerda", "direita"
 
 Caso alguém tenha interesse em adicionar novas funcionalidades ao jogo sinta-se a vontade.
-Vou dar algumas sugestões:
+Aqui vai algumas sugestões:
 1- Colocar obstáculos no meio do cenario que não podem ser tocados.
 2- Dar opção ao player para escolher um nível de dificuldade, podendo aumentar a velocidade e inserir alguma quantia de obstáculos conforme o nível escolhido.
 3- Poder mudar o tamanho do cenário
